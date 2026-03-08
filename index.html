@@ -1,58 +1,40 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Trends</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제휴 설문조사</title>
+  <link rel="stylesheet" href="partnership.css">
 </head>
 <body>
-    <header>
-        <h1>Stock Trends</h1>
-        <button id="theme-toggle" type="button" aria-label="Toggle theme">Switch to Light Mode</button>
-    </header>
-    <main>
-        <div class="chart-container">
-            <stock-chart></stock-chart>
-        </div>
-        <div class="stock-list">
-            <h2>Popular Stocks</h2>
-            <ul>
-                <li><a href="#">AAPL</a></li>
-                <li><a href="#">GOOGL</a></li>
-                <li><a href="#">MSFT</a></li>
-                <li><a href="#">AMZN</a></li>
-                <li><a href="#">TSLA</a></li>
-            </ul>
-        </div>
-    </main>
-    <section class="partnership-section" aria-labelledby="partnership-title">
-        <h2 id="partnership-title">Partnership Inquiry</h2>
-        <p>Fill out the form and we will contact you shortly.</p>
-        <form class="partnership-form" action="https://formspree.io/f/xgonvnkp" method="POST">
-            <input type="hidden" name="_subject" value="New Partnership Inquiry">
-            <input type="text" name="_gotcha" class="hidden-field" tabindex="-1" autocomplete="off">
+  <main class="wrap">
+    <section class="card" aria-labelledby="survey-title">
+      <h1 id="survey-title">제휴 설문조사</h1>
+      <p>아래 설문에 응답해 주시면 검토 후 연락드리겠습니다.</p>
 
-            <label for="partner-name">Name</label>
-            <input id="partner-name" type="text" name="name" required>
+      <form action="https://formspree.io/f/xgonvnkp" method="POST" class="form">
+        <input type="hidden" name="_subject" value="새 제휴 설문 응답">
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
 
-            <label for="partner-email">Email</label>
-            <input id="partner-email" type="email" name="email" required>
+        <label for="name">담당자명</label>
+        <input id="name" name="name" type="text" required>
 
-            <label for="partner-company">Company</label>
-            <input id="partner-company" type="text" name="company">
+        <label for="email">이메일</label>
+        <input id="email" name="email" type="email" required>
 
-            <label for="partner-message">Message</label>
-            <textarea id="partner-message" name="message" rows="5" required></textarea>
+        <label for="company">회사명</label>
+        <input id="company" name="company" type="text" required>
 
-            <button type="submit">Send Inquiry</button>
-        </form>
+        <label for="partner-type">희망 제휴 형태</label>
+        <input id="partner-type" name="partner_type" type="text" placeholder="예: 공동 마케팅, 콘텐츠 제휴" required>
+
+        <label for="message">기타 의견</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">설문 제출</button>
+      </form>
     </section>
-    <footer>
-        <p>&copy; 2024 Stock Trends</p>
-    </footer>
-    <script src="main.js"></script>
+  </main>
 </body>
 </html>

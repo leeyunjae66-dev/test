@@ -102,6 +102,57 @@ main {
     color: var(--surface-color);
 }
 
+.partnership-section {
+    margin: 0 1rem 1rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.partnership-section h2 {
+    margin-top: 0;
+}
+
+.partnership-form {
+    display: grid;
+    gap: 0.65rem;
+}
+
+.partnership-form label {
+    font-size: 0.95rem;
+}
+
+.partnership-form input,
+.partnership-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--on-background-color);
+    border-radius: 6px;
+    padding: 0.65rem;
+}
+
+.partnership-form button {
+    margin-top: 0.25rem;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 0.65rem 0.9rem;
+    cursor: pointer;
+}
+
+.partnership-form button:hover {
+    filter: brightness(1.05);
+}
+
+.hidden-field {
+    display: none;
+}
+
 footer {
     background-color: var(--surface-color);
     padding: 1rem;

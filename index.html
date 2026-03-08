@@ -28,6 +28,28 @@
             </ul>
         </div>
     </main>
+    <section class="partnership-section" aria-labelledby="partnership-title">
+        <h2 id="partnership-title">Partnership Inquiry</h2>
+        <p>Fill out the form and we will contact you shortly.</p>
+        <form class="partnership-form" action="https://formspree.io/f/xgonvnkp" method="POST">
+            <input type="hidden" name="_subject" value="New Partnership Inquiry">
+            <input type="text" name="_gotcha" class="hidden-field" tabindex="-1" autocomplete="off">
+
+            <label for="partner-name">Name</label>
+            <input id="partner-name" type="text" name="name" required>
+
+            <label for="partner-email">Email</label>
+            <input id="partner-email" type="email" name="email" required>
+
+            <label for="partner-company">Company</label>
+            <input id="partner-company" type="text" name="company">
+
+            <label for="partner-message">Message</label>
+            <textarea id="partner-message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Inquiry</button>
+        </form>
+    </section>
     <footer>
         <p>&copy; 2024 Stock Trends</p>
     </footer>

@@ -1,14 +1,35 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trends</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1>Stock Trends</h1>
+    </header>
+    <main>
+        <div class="chart-container">
+            <stock-chart></stock-chart>
+        </div>
+        <div class="stock-list">
+            <h2>Popular Stocks</h2>
+            <ul>
+                <li><a href="#">AAPL</a></li>
+                <li><a href="#">GOOGL</a></li>
+                <li><a href="#">MSFT</a></li>
+                <li><a href="#">AMZN</a></li>
+                <li><a href="#">TSLA</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Stock Trends</p>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
